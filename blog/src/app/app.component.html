@@ -1,0 +1,19 @@
+<h1>Hello World...!</h1>
+{{Name}}
+<h2>{{first_name}}</h2>
+<h2>{{getName()}}</h2>
+<h2>{{obj.name}}</h2>
+<h3>{{arr.length}}</h3>
+<h3>{{a+b}}</h3>
+<h3>{{siteUrl}}</h3>
+<app-userlist></app-userlist>
+<app-login></app-login>
+<button (click)="getFunction(first_name)">Call Function</button>
+<br><br>
+<input type="text" #box (keyup.enter)="myEvent(box.value)">
+<br><br>
+<input type="text" #input (keydown)="myEvent(input.value)">
+<br><br>
+<div (mouseover)="myEvent('MouseOver')" style="background-color: blue;">
+    Mouse Over
+</div>
