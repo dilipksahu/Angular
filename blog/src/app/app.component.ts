@@ -29,4 +29,23 @@ export class AppComponent {
   myEvent(evt){
     console.warn(evt)
   }
+  currentVal=""
+  getValue(val){
+    console.warn(val)
+    this.currentVal = val
+  }
+
+  disabledBox = true
+  enableBox(){
+    this.disabledBox = false
+  }
+  show = "yes"
+  color = "Red"
+  array = ["Dilip","Akshay","Ahmed"]
+  object = [
+    {name:"Dilip",age:30,email:"dilip@gmail.com"},
+    {name:"Akshay",age:27,email:"akshay@gmail.com"},
+    {name:"Ahmed",age:28,email:"ahmed@gmail.com"}
+  ]
 }
+

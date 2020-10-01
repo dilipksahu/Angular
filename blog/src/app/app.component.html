@@ -17,3 +17,69 @@
 <div (mouseover)="myEvent('MouseOver')" style="background-color: blue;">
     Mouse Over
 </div>
+<br><br>
+<input type="text" #box />
+
+<button (click)="getValue(box.value)">Get Value</button>
+<h2>{{currentVal}}</h2>
+
+<br>
+<input type="text" [disabled]="disabledBox" [value]="Name">
+<br><br>
+<input type="text" disabled={{disabledBox}} value="{{Name}}">
+<br>
+<button (click)="enableBox()">Enable</button>
+<!-- ********************* Condition ***************************** -->
+<h1 *ngIf="show=='yes' then ifBlock else elseBlock">if block</h1>
+<ng-template #ifBlock>
+    <h1>if block</h1>
+</ng-template>
+<ng-template #elseBlock>
+    <h1>else block</h1>
+</ng-template>
+
+<ng-template [ngIf]="color=='Red'">
+    <h1>color-Red</h1>
+</ng-template>
+<ng-template [ngIf]="color=='Green'">
+    <h1>color-Green</h1>
+</ng-template>
+<ng-template [ngIf]="color=='Blue'">
+    <h1>color-Blue</h1>
+</ng-template>
+
+<div [ngSwitch]="color">
+    <h1 style="color:red;" *ngSwitchCase="'Red'">
+        Switch color Red
+    </h1>
+    <h1 style="color:green;" *ngSwitchCase="'Green'">
+        Switch color Green
+    </h1>
+    <h1 style="color:blue;" *ngSwitchCase="'Blue'">
+        Switch color Blue
+    </h1>
+
+</div>
+
+<!-- ********** For Loop ************** -->
+<div *ngFor="let item of array">
+    <h3>{{item}}</h3>
+</div>
+
+<table border="1">
+
+
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+    </tr>
+
+    <tr *ngFor="let item of object">
+        <td>{{item.name}}</td>
+        <td>{{item.age}}</td>
+        <td>{{item.email}}</td>
+    </tr>
+
+
+</table>
