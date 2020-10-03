@@ -1,2 +1,9 @@
-<h1>
-    <h2>User Login Component</h2>User Login Module</h1>
+<h1>User Registration Form</h1>
+
+<form #simpleForm="ngForm" (ngSubmit)="getUserValue(simpleForm.value)">
+    <input type="text" ngModel name="username" placeholder="Enter name"><br>
+    <input type="text" ngModel name="age" placeholder="Enter age"><br>
+    <input type="text" ngModel name="address" placeholder="Enter address"><br>
+    <input type="password" ngModel name="pass" placeholder="Enter password"><br>
+    <button>Print</button>
+</form>

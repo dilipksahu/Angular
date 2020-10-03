@@ -47,5 +47,10 @@ export class AppComponent {
     {name:"Akshay",age:27,email:"akshay@gmail.com"},
     {name:"Ahmed",age:28,email:"ahmed@gmail.com"}
   ]
+
+  getUserValue(value){
+    console.log(value)
+  }
+  
 }
 
