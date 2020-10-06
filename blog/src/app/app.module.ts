@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserlistComponent } from './userlist/userlist.component';
 import {UsersModule} from './users/users.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button'
 
 
 @NgModule({
@@ -15,7 +18,10 @@ import {UsersModule} from './users/users.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    UsersModule
+    UsersModule,
+    NgbModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

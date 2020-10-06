@@ -8,6 +8,7 @@
 <h3>{{siteUrl}}</h3>
 <app-userlist></app-userlist>
 <app-login></app-login>
+<app-userlist [hero]=obj></app-userlist>
 <button (click)="getFunction(first_name)">Call Function</button>
 <br><br>
 <input type="text" #box (keyup.enter)="myEvent(box.value)">
@@ -84,3 +85,13 @@
 
 
 </table>
+
+
+<h2 style="color: red;">Style binding</h2>
+<h2 [style.color]="'green'">Style binding using property method</h2>
+<h2 [style.color]="color">Dynamic Style binding</h2>
+<h2 [style.color]="err?'red':'green'">Conditional Style binding</h2>
+
+<button (click)="updateColor()">Update Color</button><br><br>
+
+<app-userlist [hero]="obj"></app-userlist>

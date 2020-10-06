@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -40,17 +42,19 @@ export class AppComponent {
     this.disabledBox = false
   }
   show = "yes"
-  color = "Red"
+  color = "yellow"
   array = ["Dilip","Akshay","Ahmed"]
   object = [
     {name:"Dilip",age:30,email:"dilip@gmail.com"},
     {name:"Akshay",age:27,email:"akshay@gmail.com"},
     {name:"Ahmed",age:28,email:"ahmed@gmail.com"}
   ]
-
-  getUserValue(value){
-    console.log(value)
-  }
   
+  err = false;
+  updateColor(){
+    this.color ="violet"
+  }
+
+  data="Dilip Sahu"
 }
 
